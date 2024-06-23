@@ -1,5 +1,5 @@
-from aligner_helpers import *
-from compsci260lib import *
+lfrom aligner_helpers import *
+from helperlibrary import *
 
 
 def run_global_aligner():
