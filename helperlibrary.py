@@ -1,7 +1,4 @@
-"""
-COMPSCI 260 Python library
-
-A basic library module that contains some useful features.
+A library module that contains some useful features.
 """
 import re
 import sys
@@ -9,11 +6,7 @@ import sys
 
 def get_fasta_dict(filename):
     """Given a fasta input file, return a dictionary with the name of each
-       sequence as a key, and the actual sequence as the value.  Thus, if you
-       called dict = get_fasta_dict(filename), you could see the sequence named
-       "sequencename" (given that it exists with that name in the fasta file)
-       by refering to dict["sequencename"].  To see all of the sequence names, 
-       you could use dict.keys()."""
+       sequence as a key, and the actual sequence as the value."""
 
     filename.rstrip()
     fasta_dict = {}
