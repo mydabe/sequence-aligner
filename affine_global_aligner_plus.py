@@ -8,10 +8,10 @@ def run_ag_aligner_plus():
     alignment.
     """
     # Import the appropriate sequences to be aligned
-    dict = get_fasta_dict("students.fasta")
-    seq1 = dict["Student_3"]
-    seq2 = dict["Student_7"]
-    match = 2  # Using the scoring function indicated in Problem 1. If protein sequence, ignore this
+    dict = get_fasta_dict("")
+    seq1 = #Fill appropriately
+    seq2 = #Fill appropriately
+    match = 2  # Using arbitrary match incentive, if protein sequence, this will not be used.
     mismatch = -1
     gap_penalty = 1  # Gap penalty specified in Problem 3
     affine_penalty = 11
