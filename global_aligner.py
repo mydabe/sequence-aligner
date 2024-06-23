@@ -1,4 +1,4 @@
-lfrom aligner_helpers import *
+from aligner_helpers import *
 from helperlibrary import *
 
 
@@ -8,7 +8,7 @@ def run_global_aligner():
     appropriate substitution matrix, run the global aligner and report the
     optimal alignment score.
     """
-    dict = get_fasta_dict("students.fasta")
+    dict = get_fasta_dict("")
     print(global_aligner(dict["Student_1"], dict["Student_7"], ))
     seq1 = dict["Student_1"]
     seq2 = dict["Student_7"]
