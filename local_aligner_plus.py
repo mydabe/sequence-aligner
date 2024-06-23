@@ -4,20 +4,19 @@ from random import randint
 
 
 def run_local_aligner_plus():
-    """Locally align O18381.fasta and P63015.fasta and report the
-    optimal score and optimal local alignment information.
+    """Locally align two sequences in .fasta files
     """
     # Import the appropriate sequences to be locally aligned
-    dict1 = get_fasta_dict("P63015.fasta")
-    dict2 = get_fasta_dict("O18381.fasta")
+    dict1 = get_fasta_dict("")
+    dict2 = get_fasta_dict("")
     list1 = list(dict1.values())
     list2 = list(dict2.values())
 
     seq1 = list1[0]
     seq2 = list2[0]
-    match = 2  # Using the scoring function indicated in Problem 1, ignore if aligning protein sequences
+    match = 2  #
     mismatch = -1
-    gap_penalty = 8  # Gap penalty specified in Problem 4
+    gap_penalty = 8  
 
     seq_type = validate_sequences(seq1, seq2)
     if seq_type == 1:
