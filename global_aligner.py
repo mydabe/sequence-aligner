@@ -9,12 +9,12 @@ def run_global_aligner():
     optimal alignment score.
     """
     dict = get_fasta_dict("")
-    print(global_aligner(dict["Student_1"], dict["Student_7"], ))
-    seq1 = dict["Student_1"]
-    seq2 = dict["Student_7"]
-    match = 2  # Using the scoring function indicated in Problem 1
+    print(global_aligner(dict[""], dict[""], ))
+    seq1 = dict[""]
+    seq2 = dict[""]
+    match = 2  # Using an arbitrary match incentive.
     mismatch = -1
-    gap_penalty = 1  # Gap penalty specified in Problem 1
+    gap_penalty = 1  # Using an arbitrary gap penalty.
 
     seq_type = validate_sequences(seq1, seq2)
     if seq_type == 1:
