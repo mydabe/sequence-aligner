@@ -1,4 +1,4 @@
-from compsci260lib import *
+from helperlibrary import *
 from aligner_helpers import *
 
 
