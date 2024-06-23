@@ -8,17 +8,17 @@ def run_global_aligner_plus():
     For each alignment, report the optimal alignment score,
     the top-most alignment, and the bottom-most alignment.
     """
-    # Retrieve appropriate sequences to be aligned
-    dict1 = get_fasta_dict("atpa_Mm.fasta")
-    dict2 = get_fasta_dict("atpa_Bs.fasta")
+    # Retrieve appropriate sequences to be aligned (.fasta files).
+    dict1 = get_fasta_dict("")
+    dict2 = get_fasta_dict("")
     list1 = list(dict1.values())
     list2 = list(dict2.values())
 
     seq1 = list1[0]
     seq2 = list2[0]
-    match = 2  # Using the scoring function indicated in Problem 1
+    match = 2  # Using an arbitrary scoring function
     mismatch = -1
-    gap_penalty = 8  # Gap penalty specified in Problem 1
+    gap_penalty = 8  # Using an arbitrary gap penalty.
 
     seq_type = validate_sequences(seq1, seq2)
     if seq_type == 1:
@@ -68,18 +68,6 @@ def solve_global_aligner_plus(seq1, seq2, subst_dict, gap_penalty):
         (the optimal alignment score as an int,
          the top-most alignment achieving this score as a tuple of strings,
          the bottom-most alignment achieving this score as a tuple of strings)
-
-        Example output:
-
-            (6, ("AT-AGG", "ATCCGG"), ("ATA-GG", "ATCCGG"))
-
-    Note: If you do the extra challenge to report all optimal alignments,
-    you can lengthen the size of the return tuple, but ensure that its second
-    element (i.e., the first alignment) remains the top-most alignment, while
-    the last element is the bottom-most alignment. e.g.
-
-        (optimal score, (top-most alignment sequences), ...,
-         (bottom-most alignment sequences))
     """
 
     # Initialize the DP table's data structure
